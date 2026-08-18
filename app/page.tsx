@@ -67,9 +67,9 @@ export default function Home() {
   return (
     <main className="shell">
       <header className="hero">
-        <p className="eyebrow">NAMYAM IMAGE LAB · v0.1</p>
+        <p className="eyebrow">NAMYAM IMAGE LAB · v0.2 · CLOUDFLARE WORKERS AI</p>
         <h1>냠얌 캐릭터 생성기</h1>
-        <p>캐릭터 외형은 고정하고 표정·구도·배경만 빠르게 갈아끼우는 생성기.</p>
+        <p>캐릭터 외형은 고정하고 표정·구도·배경을 빠르게 바꿔 생성하는 개인용 이미지 도구.</p>
       </header>
 
       <div className="grid">
@@ -131,7 +131,7 @@ export default function Home() {
             />
           </label>
 
-          <button disabled={loading}>{loading ? "생성 중..." : "이미지 생성"}</button>
+          <button disabled={loading}>{loading ? "생성 중..." : "무료 할당량으로 이미지 생성"}</button>
           {error && <p className="error">{error}</p>}
         </form>
 
@@ -156,7 +156,7 @@ export default function Home() {
               // eslint-disable-next-line @next/next/no-img-element
               <img src={image} alt="생성된 캐릭터" />
             ) : (
-              <div className="empty">API 키를 설정한 뒤 생성 버튼을 누르면 여기에 결과가 떠.</div>
+              <div className="empty">Cloudflare 계정 ID와 Workers AI API 토큰을 설정하면 여기에 결과가 떠.</div>
             )}
           </article>
         </section>
